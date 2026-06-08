@@ -14,9 +14,9 @@ pipeline{
             steps{
                 script{
                     sh '''
-                    docker run -d --name nginx-test -p 8080:80 my-nginx
+                    docker run -d --name nginx-test -p 8081:80 my-nginx
                     sleep 5
-                    curl localhost:8080
+                    curl localhost:8081
                     docker rm -f nginx-test
                     '''
                 }
